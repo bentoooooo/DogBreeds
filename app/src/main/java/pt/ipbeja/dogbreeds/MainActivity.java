@@ -8,7 +8,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        FragmentArticle newFragment = new FragmentArticle();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        FragmentHeadlines newFragment = new FragmentHeadlines();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragmentContainer, newFragment);
         transaction.addToBackStack(null);
